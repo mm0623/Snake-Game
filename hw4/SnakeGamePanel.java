@@ -24,7 +24,7 @@ public class SnakeGamePanel extends JPanel{
     */
     public SnakeGamePanel(){
         this.setPreferredSize(new Dimension(320,320)); //320x320 pixels panel
-        this.setBackground(Color.BLUE); //set panel to blue
+        this.setBackground(Color.white); //set panel to green
         this.setFocusable(true); // set panel as focusable
         
         newGame(); //start new game
@@ -138,12 +138,12 @@ public class SnakeGamePanel extends JPanel{
         //update the old graphic to prevent overlap
         super.paintComponent(g);
 
-        //repaint the apple UI (green, each block is 20x20) at current coordinates
-        g.setColor(Color.green);
+        //repaint the apple UI (red, each block is 20x20) at current coordinates
+        g.setColor(Color.red);
         g.fillRect(apple.x,apple.y,20,20);
 
-        //repain the snake UI (red, each block is 20x20) at current coordinates
-        g.setColor(Color.red);
+        //repain the snake UI (blue, each block is 20x20) at current coordinates
+        g.setColor(Color.BLUE);
         for(Sequence s:snake){
             g.fillRect(s.x,s.y,20,20);
         }
